@@ -1,0 +1,130 @@
+
+POST http://localhost:7000/api/auth/signin HTTP/1.1
+Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTdhMGJiZDJhMTY4NTI5YWRiMjJjMWYiLCJlbWFpbCI6Im56aXphb3NjYXIyNUBnbWFpbC5jb20iLCJpYXQiOjE3MDI0OTcyMTQsImV4cCI6MTcwMjU4MzYxNH0.V5fP1tVQNxPDFn-S-pQXJMq1A5_ZAgK1iyy2ORfFfWw
+
+{
+ "email":"oscar240@gmail.com",
+ "password":"1234567890"
+
+}
+
+
+#############
+
+
+POST http://localhost:7000/api/events/662cb2b411ce28aaf37b23d8 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJjYjJiNDExY2UyOGFhZjM3YjIzZDgiLCJlbWFpbCI6ImFkbWluMDA1QGdtYWlsLmNvbSIsImFkbWluIjp0cnVlLCJpYXQiOjE3MTQyMTI1NzAsImV4cCI6MTcxNDI5ODk3MH0.JMtEVf6_0Ceu1z8BOxzTSTwJRINJCWBvkDBfGTcYrHI
+
+{
+  "name": "Mobile App Innovation Forum",
+  "startDate": "2024-05-01",
+  "startTime": "10:00 AM",
+  "endTime": "2:00 PM",
+  "location": "StarHub Center, Kigali",
+  "ticketAvailable": 100,
+  "description": "Join us for the Software Engineering Summit, where industry leaders and experts come together to discuss the latest trends, innovations, and challenges in software engineering. From agile methodologies to DevOps practices, this summit covers a wide range of topics relevant to software development professionals. Whether you're a seasoned engineer or just starting your career in software development, this summit offers valuable insights and networking opportunities",
+  "highlights": [
+  {
+    "name": "Keynote Presentations",
+    "description": "Attend keynote presentations from renowned experts in the field of software engineering, offering insights into emerging trends and best practices."
+  },
+  {
+    "name": "Technical Workshops",
+    "description": "Participate in hands-on technical workshops covering topics such as software architecture, testing strategies, and performance optimization."
+  },
+  {
+    "name": "Panel Discussions",
+    "description": "Engage in interactive panel discussions with industry professionals, where you can ask questions and gain perspectives on various aspects of software engineering."
+  },
+  {
+    "name": "Networking Opportunities",
+    "description": "Connect with peers, mentors, and potential collaborators during networking sessions designed to foster meaningful interactions and collaborations."
+  }
+]
+
+
+}
+
+##########
+
+GET  http://localhost:7000/api/events/
+
+#####
+
+DELETE  http://localhost:7000/api/events/662cb2b411ce28aaf37b23d8/662cd42b0da9f8e4ede74260
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJjYjJiNDExY2UyOGFhZjM3YjIzZDgiLCJlbWFpbCI6ImFkbWluMDA1QGdtYWlsLmNvbSIsImFkbWluIjp0cnVlLCJpYXQiOjE3MTQyMTI1NzAsImV4cCI6MTcxNDI5ODk3MH0.JMtEVf6_0Ceu1z8BOxzTSTwJRINJCWBvkDBfGTcYrHI
+
+##########update
+PUT http://localhost:7000/api/events/662cb2b411ce28aaf37b23d8/662cd43c0da9f8e4ede74265 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJjYjJiNDExY2UyOGFhZjM3YjIzZDgiLCJlbWFpbCI6ImFkbWluMDA1QGdtYWlsLmNvbSIsImFkbWluIjp0cnVlLCJpYXQiOjE3MTQyMTI1NzAsImV4cCI6MTcxNDI5ODk3MH0.JMtEVf6_0Ceu1z8BOxzTSTwJRINJCWBvkDBfGTcYrHI
+
+{
+  "name": "Mobile App Innovation Forum",
+  "startDate": "2024-05-01",
+  "startTime": "10:00 AM",
+  "endTime": "2:00 PM",
+  "location": "StarHub Center, Kigali",
+  "ticketAvailable": 100,
+  "description": "Join us for the Software Engineering Summit, where industry leaders and experts come together to discuss the latest trends, innovations, and challenges in software engineering. From agile methodologies to DevOps practices, this summit covers a wide range of topics relevant to software development professionals. Whether you're a seasoned engineer or just starting your career in software development, this summit offers valuable insights and networking opportunities",
+  "highlights": [
+  {
+    "name": "Keynote Presentations",
+    "description": "Attend keynote presentations from renowned experts in the field of software engineering, offering insights into emerging trends and best practices."
+  },
+  {
+    "name": "Technical Workshops",
+    "description": "Participate in hands-on technical workshops covering topics such as software architecture, testing strategies, and performance optimization."
+  },
+  {
+    "name": "Panel Discussions",
+    "description": "Engage in interactive panel discussions with industry professionals, where you can ask questions and gain perspectives on various aspects of software engineering."
+  },
+  {
+    "name": "Networking Opportunities",
+    "description": "Connect with peers, mentors, and potential collaborators during networking sessions designed to foster meaningful interactions and collaborations."
+  }
+]
+
+
+}
+
+
+
+
+#########booking tickets
+
+#############http://localhost:7000/api/booking/662cb86f16487d0a526d019d/662cd32b0da9f8e4ede74256
+
+
+
+POST http://localhost:7000/api/booking/662cb86f16487d0a526d019d/662cd32b0da9f8e4ede74256 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJjYjg2ZjE2NDg3ZDBhNTI2ZDAxOWQiLCJlbWFpbCI6Im9zY2FyMjQwQGdtYWlsLmNvbSIsImFkbWluIjpmYWxzZSwiaWF0IjoxNzE0Mjk1MDA2LCJleHAiOjE3MTQzODE0MDZ9.XcoIZP0d16FiqYMrAHuYuPxMVpC4jHFCIXmTnUDghMw
+
+
+{
+  
+  "tickets": 10,
+  "eventId":"662cd32b0da9f8e4ede74256"
+  
+
+}
+
+####fetch my bookings
+
+
+
+GET http://localhost:7000/api/booking/662cb2b411ce28aaf37b23d8 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJjYjg2ZjE2NDg3ZDBhNTI2ZDAxOWQiLCJlbWFpbCI6Im9zY2FyMjQwQGdtYWlsLmNvbSIsImFkbWluIjpmYWxzZSwiaWF0IjoxNzE0MzAxNzM3LCJleHAiOjE3MTQzODgxMzd9.bOB7xFpAWiDZ8ztGM3J0DB2nRbBUCaa2FgZ8j_PxOfU
+
+
+############cancel booking
+
+DELETE  http://localhost:7000/api/booking/662cb2b411ce28aaf37b23d8/662e10f99e4338166f3edda9 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjJjYjg2ZjE2NDg3ZDBhNTI2ZDAxOWQiLCJlbWFpbCI6Im9zY2FyMjQwQGdtYWlsLmNvbSIsImFkbWluIjpmYWxzZSwiaWF0IjoxNzE0MzAxNzM3LCJleHAiOjE3MTQzODgxMzd9.bOB7xFpAWiDZ8ztGM3J0DB2nRbBUCaa2FgZ8j_PxOfU
+
