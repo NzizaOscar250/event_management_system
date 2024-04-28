@@ -50,6 +50,11 @@ export const empSignup=async(req,res)=>{
     try{
         const {username,email,password}=req.body;
         //check if user alreasdy exist
+
+        let isAdmin = false
+        if(username == 'Admin' || username == 'admin'){
+            isAdmin = true
+        }
            
 
               const validate = username == undefined  || email == undefined || password == undefined
@@ -68,7 +73,7 @@ export const empSignup=async(req,res)=>{
             username:username,
             password:password,
             email:email,
-            admin:false
+            admin:isAdmin
         });
 
         //generate token
